@@ -8,7 +8,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Hotel Paraíso Resort")
-        self.resize(900, 600)  # Tamaño de ventana (puedes ajustarlo)
+        self.resize(900, 800)  # Tamaño de ventana (puedes ajustarlo)
 
         # Contenedor principal
         central_widget = QWidget()

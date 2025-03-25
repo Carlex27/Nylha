@@ -7,7 +7,7 @@ class Entradas(QtWidgets.QWidget):
         self.resize(1382, 810)
         self.gridLayout = QtWidgets.QGridLayout(self)
         self.gridLayout.setContentsMargins(2, 0, 0, 2)
-        self.gridLayout.setObjectName("gridLayout")
+        self.gridLayout.setObjectName("gridLayout AHHHHH")
         self.widget = QtWidgets.QWidget(self)
         self.widget.setStyleSheet("background-color: rgb(85, 255, 255);\n"
 "\n"
