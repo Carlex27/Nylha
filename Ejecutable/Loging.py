@@ -1,0 +1,171 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class login(QtWidgets.QWidget):
+    def __init__(self):
+        #Llamado al metodo contructor de la clase padre
+        super().__init__()
+
+        self.setObjectName("login")
+        self.resize(909, 712)
+        self.setMinimumSize(QtCore.QSize(909, 656))
+        self.verticalLayout = QtWidgets.QVBoxLayout(self)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.frame = QtWidgets.QFrame(self)
+        self.frame.setEnabled(True)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
+        self.frame.setSizePolicy(sizePolicy)
+        self.frame.setMinimumSize(QtCore.QSize(0, 0))
+        self.frame.setMaximumSize(QtCore.QSize(650, 850))
+        self.frame.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.frame.setStyleSheet("QFrame{\n"
+"background-color:lightblue;\n"
+"border:5px solid black;\n"
+"border-radius:10px;\n"
+"}\n"
+"\n"
+"QLabel{\n"
+"\n"
+"}\n"
+"\n"
+"QLineEdit{\n"
+"border:0px;\n"
+"border-radius:10px\n"
+"}")
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_2.setSizeConstraint(QtWidgets.QLayout.SetFixedSize)
+        self.verticalLayout_2.setContentsMargins(70, 0, 70, 0)
+        self.verticalLayout_2.setSpacing(7)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.label_logo = QtWidgets.QLabel(self.frame)
+        self.label_logo.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_logo.setMaximumSize(QtCore.QSize(1050, 150))
+        self.label_logo.setStyleSheet("border:5px solid lightblue;")
+        self.label_logo.setText("")
+        self.label_logo.setPixmap(QtGui.QPixmap("Images/logo_hotel.png"))
+        self.label_logo.setObjectName("label_logo")
+        self.verticalLayout_2.addWidget(self.label_logo, 0, QtCore.Qt.AlignHCenter)
+        spacerItem = QtWidgets.QSpacerItem(20, 110, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.verticalLayout_2.addItem(spacerItem)
+        self.label_name = QtWidgets.QLabel(self.frame)
+        self.label_name.setMaximumSize(QtCore.QSize(350, 50))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_name.setFont(font)
+        self.label_name.setStyleSheet("border:5px solid lightblue;")
+        self.label_name.setObjectName("label_name")
+        self.verticalLayout_2.addWidget(self.label_name)
+        self.Enter_name = QtWidgets.QLineEdit(self.frame)
+        self.Enter_name.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.Enter_name.setStyleSheet("background-color:white;\n"
+"font: 12pt \"Roboto\";\n"
+"")
+        self.Enter_name.setText("")
+        self.Enter_name.setObjectName("Enter_name")
+        self.verticalLayout_2.addWidget(self.Enter_name)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.verticalLayout_2.addItem(spacerItem1)
+        self.label_password = QtWidgets.QLabel(self.frame)
+        self.label_password.setMaximumSize(QtCore.QSize(350, 50))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_password.setFont(font)
+        self.label_password.setStyleSheet("border:5px solid lightblue;")
+        self.label_password.setObjectName("label_password")
+        self.verticalLayout_2.addWidget(self.label_password)
+        self.enter_password = QtWidgets.QLineEdit(self.frame)
+        self.enter_password.setMaximumSize(QtCore.QSize(1000, 50))
+        self.enter_password.setStyleSheet("background-color:white;\n"
+"font: 12pt \"Roboto\";\n"
+"")
+        self.enter_password.setText("")
+        self.enter_password.setObjectName("enter_password")
+        self.verticalLayout_2.addWidget(self.enter_password)
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_2.setContentsMargins(20, -1, 10, -1)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.button_recordar = QtWidgets.QRadioButton(self.frame)
+        self.button_recordar.setMinimumSize(QtCore.QSize(10, 60))
+        self.button_recordar.setMaximumSize(QtCore.QSize(1000, 60))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.button_recordar.setFont(font)
+        self.button_recordar.setObjectName("button_recordar")
+        self.horizontalLayout_2.addWidget(self.button_recordar, 0, QtCore.Qt.AlignTop)
+        self.label_forget_password = QtWidgets.QLabel(self.frame)
+        self.label_forget_password.setMinimumSize(QtCore.QSize(0, 60))
+        self.label_forget_password.setMaximumSize(QtCore.QSize(16777215, 60))
+        font = QtGui.QFont()
+        font.setFamily("Roboto")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setUnderline(True)
+        font.setWeight(75)
+        self.label_forget_password.setFont(font)
+        self.label_forget_password.setStyleSheet("color:darkblue;\n"
+"border:5px solid lightblue;")
+        self.label_forget_password.setObjectName("label_forget_password")
+        self.horizontalLayout_2.addWidget(self.label_forget_password, 0, QtCore.Qt.AlignTop)
+        self.verticalLayout_2.addLayout(self.horizontalLayout_2)
+        self.Button_session = QtWidgets.QPushButton(self.frame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.Button_session.sizePolicy().hasHeightForWidth())
+        self.Button_session.setSizePolicy(sizePolicy)
+        self.Button_session.setMinimumSize(QtCore.QSize(300, 50))
+        self.Button_session.setMaximumSize(QtCore.QSize(300, 50))
+        font = QtGui.QFont()
+        font.setFamily("Roboto Black")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(10)
+        self.Button_session.setFont(font)
+        self.Button_session.setStyleSheet("background-color:olive;\n"
+"font: 87 12pt \"Roboto Black\";\n"
+"color:White\n"
+"")
+        self.Button_session.setObjectName("Button_session")
+        self.verticalLayout_2.addWidget(self.Button_session, 0, QtCore.Qt.AlignHCenter)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 70, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.verticalLayout_2.addItem(spacerItem2)
+        self.verticalLayout_3.addLayout(self.verticalLayout_2)
+        self.horizontalLayout.addWidget(self.frame)
+        self.verticalLayout.addLayout(self.horizontalLayout)
+
+        self.retranslateUi()
+
+    def retranslateUi(self):
+        self.label_name.setText("Nombre de usuario")
+        self.label_password.setText("Contraseña")
+        self.button_recordar.setText("Recordar")
+        self.label_forget_password.setText("¿Haz olvidado tu contraseña?")
+        self.Button_session.setText("Iniciar sesión")
+
+
+        
